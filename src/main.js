@@ -10,7 +10,7 @@ function assignValues(obj) {
 
 function assignImgs(obj) {
   for (var i = 0; i < obj.slots.length; i++) {
-    $('#' + (i + 1)).append('<img src="' + obj.slots[i].type + '.png">');
+    $('#' + (i + 1)).append('<img class="hidden" src="../resources/' + obj.slots[i].type + '.png">');
   }
 }
 
@@ -25,6 +25,7 @@ $(function (){
   $('.face-card').click(function(){
     var clickedCard = $(this).attr('name');
     console.log(clickedCard);
+    $(this).children('img').show();
   });
 
 });
